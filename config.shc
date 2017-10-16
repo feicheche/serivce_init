@@ -1,0 +1,25 @@
+# start.sh config file
+SERVICES	"acpid anacron atd autofs avahi-daemon avahi-dnsconfd \
+bluetooth cpuspeed cups firstboot hidd hplip ip6tables isdn kudzup \
+lvm2-monitor mcstrans mdmonitor netfs nfslock pcscd restorecond \
+rpcgssd rpcidmapd setroubleshoot xfs"
+SOFTINSTALL	"expect yum lrzsz net-snmp sysstat pciutils usbutils psacct htop dstat perl-Net-SNMP"
+
+SERPATH		/etc/rc.d/init.d/
+
+INITTAB		/etc/inittab
+BASHRC		/root/.bashrc
+
+# vim 插件相关路径
+VimPluginsPath	$PWD/conf/vim_plugin/
+VimNERDPlugins	nerdtree
+
+SysBashrc	/etc/bashrc
+CRONTABROOT	/var/spool/cron/root
+SSHDCONF	/etc/ssh/sshd_config
+SSHCONF		/etc/ssh/ssh_config
+LimitConf	/etc/security/limits.conf
+SelinuxConf	/etc/sysconfig/selinux
+UnameBin	/bin/uname
+RpmBin		/bin/rpm
+RepoList	"CentOS-Base.repo epel.repo rpmforge.repo"
